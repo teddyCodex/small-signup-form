@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  background-image: url(images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 70%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+label,
+input {
+  display: inline-block;
+}
+
+label {
+  width: 90%;
+  margin: 0 auto;
+  text-align: end;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 600;
+  color: hsl(0, 100%, 74%);
+  margin-top: 3px;
+}
+
+.hidden {
+  display: none;
+}
+.hidden-input {
+  border: 2px solid hsl(0, 100%, 74%);
+  outline: none;
+}
+
+.text-section {
+  max-width: 500px;
+  width: 100%;
+}
+
+.text-section h1 {
+  font-size: 45px;
+  line-height: 50px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.text-section p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* STYLING OF FORM SECTION */
+.form-section {
+  /* border: 1px solid #333; */
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.offer {
+  border-radius: 10px;
+  text-align: center;
+  background-color: hsl(248, 32%, 49%);
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.offer a {
+  display: block;
+  padding: 15px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.form {
+  /* border: 1px solid black; */
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 30px 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 7px rgba(0, 0, 0, 0.15);
+}
+
+input {
+  width: 90%;
+  margin: 0 auto;
+  height: 45px;
+  margin-top: 20px;
+  padding-left: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(211, 211, 211);
+  font-weight: 600;
+  color: #333;
+  outline: none;
+}
+input:focus {
+  transform: scale(1.01);
+  /* border: none; */
+  outline: none;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 5px;
+}
+
+button {
+  width: 90%;
+  margin: 20px auto 10px;
+  height: 45px;
+  background-color: hsl(154, 59%, 51%);
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: hsl(154, 59%, 45%);
+}
+button:active {
+  transform: translateY(3px);
+}
+button .hidden {
+  transform: translateX(10px);
+}
+
+.form-section p {
+  text-align: center;
+  font-size: 10px;
+  color: rgb(105, 105, 105);
+}
+
+.form-section p a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+/* PULSING OFFER BUTTON */
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.03);
+  }
+  75% {
+    -webkit-transform: scale(0.96);
+    transform: scale(0.98);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.03);
+  }
+  75% {
+    -webkit-transform: scale(0.96);
+    transform: scale(0.98);
+  }
+}
+.offer {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+.offer:hover,
+.offer:focus,
+.offer:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    display: unset;
+
+    padding: 10px;
+  }
+  body {
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+  }
+
+  .text-section h1 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .text-section p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .text-section {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .form-section p {
+    font-size: 10px;
+    width: 85%;
+    margin: auto;
+  }
+}
